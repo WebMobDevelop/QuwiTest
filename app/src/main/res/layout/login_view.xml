@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bg">
+
+    <Space
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/quwi_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintWidth_percent="0.8">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/quwi_logo" />
+
+            <com.libizo.CustomEditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/login_txt_for"
+                android:textColorHint="@color/login_txt_hint_for"
+                app:libIZO_setBackgroundColor="@color/login_txt_bg"
+                app:libIZO_setBorderColor="#00000000"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setClearIconVisible="true"
+                app:libIZO_setCornerRadius="5dp"
+                app:libIZO_setCursorColor="@color/login_txt_for"
+                app:libIZO_setStrokeWidth="0dp" />
+
+            <TextView
+                android:id="@+id/lbl_err_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/email_cannot_be_blank"
+                android:textColor="@color/login_txt_err_for"
+                android:visibility="gone" />
+
+            <com.libizo.CustomEditText
+                android:id="@+id/txt_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/login_txt_for"
+                android:textColorHint="@color/login_txt_hint_for"
+                app:libIZO_setBackgroundColor="@color/login_txt_bg"
+                app:libIZO_setBorderColor="#00000000"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setClearIconVisible="true"
+                app:libIZO_setCornerRadius="5dp"
+                app:libIZO_setCursorColor="@color/login_txt_for"
+                app:libIZO_setStrokeWidth="0dp" />
+
+            <TextView
+                android:id="@+id/lbl_err_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/password_cannot_be_blank"
+                android:textColor="@color/login_txt_err_for"
+                android:visibility="gone" />
+
+            <com.marozzi.roundbutton.RoundButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/login"
+                app:rb_animation_alpha="false"
+                app:rb_animation_corner_radius="20dp"
+                app:rb_animation_duration="500"
+                app:rb_animation_progress_color="@color/light_blue"
+                app:rb_animation_progress_padding="8dp"
+                app:rb_animation_progress_style="circle"
+                app:rb_animation_progress_width="2dp"
+                app:rb_background_color="@color/login_btn_bg"
+                app:rb_background_color_pressed="@color/login_btn_bg_selected"
+                app:rb_corner_radius="4dp"
+                app:rb_corner_width="1dp"
+                app:rb_text_color="@color/login_btn_for"
+                app:rb_text_color_pressed="@android:color/white" />
+
+            <TextView
+                android:id="@+id/lbl_forgot_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/forgot_password"
+                android:textAlignment="center"
+                android:textColor="@color/login_lbl_for" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/lbl_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/dont_have_account_sign_up"
+        android:textAlignment="center"
+        android:textColor="@color/login_lbl_for"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
